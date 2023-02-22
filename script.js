@@ -80,6 +80,22 @@ secondAssignment = function () {
 };
 
 // Third Assignment - Multiplaction Table
-let mainNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+thirdAssignment = function () {
+  let buildRow = function (multiplier) {
+    let tempRow = [];
+    for (let i = 1; i < 11; i++) {
+      tempRow.push(i * multiplier);
+    }
+    return tempRow;
+  };
 
-let tableNumbers = {};
+  let addRowToTable = function () {
+    tempRows = [];
+    for (let i = 1; i < 11; i++) {
+      tempRows.push(buildRow(i));
+    }
+  };
+  addRowToTable();
+  console.log(tempRows);
+  alert("You can see the results in console");
+};
