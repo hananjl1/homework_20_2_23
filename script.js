@@ -81,21 +81,20 @@ secondAssignment = function () {
 
 // Third Assignment - Multiplaction Table
 thirdAssignment = function () {
-  let buildRow = function (multiplier) {
-    let tempRow = [];
-    for (let i = 1; i < 11; i++) {
-      tempRow.push(i * multiplier);
+  for (let x = 1; x < 11; x++) {
+    let row = "";
+    for (let y = 1; y < 11; y++) {
+      row += `${x * y}\t`;
     }
-    return tempRow;
-  };
+    console.log(row);
+  }
+};
 
-  let addRowToTable = function () {
-    tempRows = [];
-    for (let i = 1; i < 11; i++) {
-      tempRows.push(buildRow(i));
-    }
-  };
-  addRowToTable();
-  console.log(tempRows);
-  alert("You can see the results in console");
+// // Fourth Assignment
+fourthAssignment = function () {
+  let pyramidRow = "";
+  for (let x = 0; x < 11; x++) {
+    pyramidRow += "*";
+    console.log(pyramidRow);
+  }
 };
