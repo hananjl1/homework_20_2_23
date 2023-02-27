@@ -90,11 +90,82 @@ thirdAssignment = function () {
   }
 };
 
-// // Fourth Assignment
+// Pyramid 1 - Top Left
 fourthAssignment = function () {
-  let pyramidRow = "";
-  for (let x = 0; x < 11; x++) {
-    pyramidRow += "*";
-    console.log(pyramidRow);
+  numOfLevel = prompt("enter number of levels");
+  starsRow = "";
+  for (numberOfStars = 0; numberOfStars < numOfLevel; numberOfStars++) {
+    starsRow += "* ";
+    console.log(starsRow);
+  }
+};
+
+// Pyramid 2 - Bottom Left
+fifthAssignment = function () {
+  let numOfLevel = prompt("enter number of levels");
+
+  for (let numberOfStars = numOfLevel; numberOfStars > 0; numberOfStars--) {
+    let starsRow = "";
+    for (let i = 0; i < numberOfStars; i++) {
+      starsRow += "* ";
+    }
+
+    console.log(starsRow);
+  }
+};
+
+// Pyramid 3 - Center
+sixthAssignment = function () {
+  addSideSpaces = function (sideSpaces) {
+    while (sideSpaces > 0) {
+      starsRow += "  ";
+      sideSpaces--;
+    }
+    return starsRow;
+  };
+  let numOfLevel = prompt("enter number of levels");
+  let maxOfStars = Number(numOfLevel) + Number(numOfLevel) - 1;
+
+  for (let i = 1; i <= numOfLevel; i++) {
+    let numberOfStars = i + i - 1;
+    let sideSpaces = maxOfStars - numberOfStars;
+
+    starsRow = "";
+    // Adding spaces in the first side
+    starsRow += addSideSpaces(sideSpaces / 2);
+    for (j = 0; j < numberOfStars; j++) {
+      starsRow += "* ";
+    }
+
+    console.log(starsRow);
+    numberOfStars += 2;
+  }
+};
+
+// Pyramid 4 - Top Right
+seventhAssignment = function () {
+  addSideSpaces = function (sideSpaces) {
+    while (sideSpaces > 0) {
+      starsRow += "  ";
+      sideSpaces--;
+    }
+    return starsRow;
+  };
+  let numOfLevel = prompt("enter number of levels");
+  let maxOfStars = Number(numOfLevel) + Number(numOfLevel) - 1;
+
+  for (let i = 1; i <= numOfLevel; i++) {
+    let numberOfStars = i;
+    let sideSpaces = maxOfStars - numberOfStars;
+
+    starsRow = "";
+    // Adding spaces in the first side
+    starsRow += addSideSpaces(sideSpaces);
+    for (j = 0; j < numberOfStars; j++) {
+      starsRow += "* ";
+    }
+
+    console.log(starsRow);
+    numberOfStars += 2;
   }
 };
